@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">DwayneJohnsonQuizApp</string>
+    <string name="welcomeText"><b>Welcome to the Dwayne Johnson Quiz!</b>\n</string>
+    <string name="welcomePart2">Here your knowledge about the world famous athlete/entertainer/actor will be tested. Please answer the following 5 questions.</string>
+    <string name="question2">2. Which of these scenes is from the movie WALKING TALL?</string>
+    <string name="question3">3. What nickname(s)/stage name(s) is/are Dwayne Johnson known for?</string>
+    <string name="the_hawaiian_saiyan">The Hawaiian Saiyan</string>
+    <string name="the_most_electrifying_man_in_all_of_entertainment">The Most Electrifying Man In All Of Entertainment</string>
+    <string name="the_rock">The Rock</string>
+    <string name="the_hardest_working_man_on_the_planet">The Hardest Working Man On The Planet</string>
+    <string name="the_brahma_bull">The Brahma Bull</string>
+    <string name="question4">4. What movie did Dwayne <b>most recently</b> star in with Kevin Hart?</string>
+    <string name="central_intelligence">Central Intelligence</string>
+    <string name="jumanji">Jumanji</string>
+    <string name="get_smart">Get Smart</string>
+    <string name="ride_along">Ride Along</string>
+    <string name="question5">5. How many movies in the Fast And Furious franchise did Dwayne star in as Luke Hobbs?</string>
+</resources>
