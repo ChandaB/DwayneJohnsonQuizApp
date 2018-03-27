@@ -14,7 +14,7 @@ public class DisplayResultsActivity extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_display_results );
 
-        // Get the Intent that started this activity and extract the string
+        // Get the Intent that started this activity and extract the data that was passed
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
@@ -23,8 +23,12 @@ public class DisplayResultsActivity extends AppCompatActivity {
         double percentageCorrect = extras.getDouble( "Percent Correct" );
         Boolean allAnswersCorrect = extras.getBoolean( "Quiz Correct" );
 
+        /*Here I added logic to display a different message based on whether or not the user
+        submitted all answers correctly.
+         */
         if (allAnswersCorrect) {
-            String message = "Congratulations " + name + " You've answered all questions correctly!";
+            String message = "Congratulations " + name + " You've answered all questions correctly! " +
+                    "and you even know your name!";
             TextView textView = findViewById(R.id.resultsMessage);
             textView.setText(message);
         } else {
@@ -34,6 +38,11 @@ public class DisplayResultsActivity extends AppCompatActivity {
             textView.setText( message );
         }
 
+        /*This is an action to take the user back to the main quiz screen.  Note this does not
+        clear the data they entered. If they want to clear all data, they will need to Reset the
+        app on the home screen.  As per many sites, you aren't supposed to allow a user to close
+        the app via something like a 'Close' button...
+        */
         Button btn1 = findViewById(R.id.btn1);
         btn1.setOnClickListener(new View.OnClickListener() {
 

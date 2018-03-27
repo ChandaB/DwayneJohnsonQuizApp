@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#e3f2fd"
     tools:context="com.example.android.dwaynejohnsonquizapp.MainActivity">
 
     <LinearLayout
@@ -30,6 +31,7 @@
                 android:layout_height="match_parent"
                 android:paddingBottom="32dp"
                 android:text="@string/welcomePart2"
+                android:textColor="#424242"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -51,9 +53,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:layout_marginRight="16dp"
+                android:textColor="#616161"
                 android:hint="Please Enter Your Name Here"
                 android:imeOptions="actionDone"
-
                 android:inputType="textPersonName|textCapWords" />
         </LinearLayout>
 
@@ -140,7 +142,7 @@
                 android:paddingLeft="24dp"
                 android:paddingTop="4dp"
                 android:text="@string/the_hawaiian_saiyan"
-                android:textColor="#757575"
+                android:textColor="#616161"
                 android:textSize="24sp" />
 
             <CheckBox
@@ -153,7 +155,7 @@
                 android:paddingLeft="24dp"
                 android:paddingTop="4dp"
                 android:text="@string/the_most_electrifying_man_in_all_of_entertainment"
-                android:textColor="#757575"
+                android:textColor="#616161"
                 android:textSize="24sp" />
 
             <CheckBox
@@ -166,7 +168,7 @@
                 android:paddingLeft="24dp"
                 android:paddingTop="4dp"
                 android:text="@string/the_rock"
-                android:textColor="#757575"
+                android:textColor="#616161"
                 android:textSize="24sp" />
 
             <CheckBox
@@ -179,7 +181,7 @@
                 android:paddingLeft="24dp"
                 android:paddingTop="4dp"
                 android:text="@string/the_hardest_working_man_on_the_planet"
-                android:textColor="#757575"
+                android:textColor="#616161"
                 android:textSize="24sp" />
 
             <CheckBox
@@ -192,7 +194,7 @@
                 android:paddingLeft="24dp"
                 android:paddingTop="4dp"
                 android:text="@string/the_brahma_bull"
-                android:textColor="#757575"
+                android:textColor="#616161"
                 android:textSize="24sp" />
         </LinearLayout>
 
@@ -222,7 +224,7 @@
                     android:paddingBottom="8dp"
                     android:paddingLeft="24dp"
                     android:text="@string/central_intelligence"
-                    android:textColor="#757575"
+                    android:textColor="#616161"
                     android:textSize="24sp" />
 
                 <RadioButton
@@ -234,7 +236,7 @@
                     android:paddingBottom="8dp"
                     android:paddingLeft="24dp"
                     android:text="@string/jumanji"
-                    android:textColor="#757575"
+                    android:textColor="#616161"
                     android:textSize="24sp" />
 
                 <RadioButton
@@ -246,7 +248,7 @@
                     android:paddingBottom="8dp"
                     android:paddingLeft="24dp"
                     android:text="@string/get_smart"
-                    android:textColor="#757575"
+                    android:textColor="#616161"
                     android:textSize="24sp" />
 
                 <RadioButton
@@ -258,7 +260,7 @@
                     android:paddingBottom="8dp"
                     android:paddingLeft="24dp"
                     android:text="@string/ride_along"
-                    android:textColor="#757575"
+                    android:textColor="#616161"
                     android:textSize="24sp" />
             </RadioGroup>
         </LinearLayout>
@@ -289,7 +291,7 @@
                     android:paddingBottom="8dp"
                     android:paddingLeft="8dp"
                     android:text="7"
-                    android:textColor="#757575"
+                    android:textColor="#616161"
                     android:textSize="24sp" />
 
                 <RadioButton
@@ -301,7 +303,7 @@
                     android:paddingBottom="8dp"
                     android:paddingLeft="8dp"
                     android:text="6"
-                    android:textColor="#757575"
+                    android:textColor="#616161"
                     android:textSize="24sp" />
 
                 <RadioButton
@@ -313,7 +315,7 @@
                     android:paddingBottom="8dp"
                     android:paddingLeft="8dp"
                     android:text="5"
-                    android:textColor="#757575"
+                    android:textColor="#616161"
                     android:textSize="24sp" />
 
                 <RadioButton
@@ -325,7 +327,7 @@
                     android:paddingBottom="8dp"
                     android:paddingLeft="8dp"
                     android:text="4"
-                    android:textColor="#757575"
+                    android:textColor="#616161"
                     android:textSize="24sp" />
 
             </RadioGroup>
@@ -339,13 +341,18 @@
             android:paddingTop="36dp">
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:onClick="submitAnswers"
+                android:background="@drawable/bluebuttonsmall"
+                android:textColor="#FFFFFF"
                 android:text="Submit Answers" />
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="175dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:background="@drawable/bluebuttonsmall"
+                android:textColor="#FFFFFF"
                 android:onClick="resetApp"
                 android:text="Reset All"/>
         </LinearLayout>
