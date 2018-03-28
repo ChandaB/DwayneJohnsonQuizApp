@@ -10,8 +10,12 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+/**
+ *
+ */
 public class MainActivity extends AppCompatActivity {
 
+    //Variables needs to perform score calculations and validation checks
     boolean isCorrectQuestion1;
     boolean isCorrectQuestion2;
     boolean isCorrectQuestion3;
@@ -27,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView( R.layout.activity_main );
     }
 
+    /**
+     * @param view for Submit button
+     */
     public void submitAnswers(View view) {
 
         /*Instead of creating a seperate method to confirm the user entered a name, I opted
@@ -36,11 +43,13 @@ public class MainActivity extends AppCompatActivity {
         * isCorrectQuestion1 value is set to true and the calculation to determine whether or not
         * all answers was correct is executed, along with the passing of data over to the
         * display results activity.  If the name is empty, then a toast message is displayed
-        * prompting the user to enter their name before they can submit their answers.*/
+        * prompting the user to enter their name before they can submit their answers.
+
+        * */
         EditText nameEntry = findViewById( R.id.name_input );
         String name = nameEntry.getText().toString();
 
-        if (name != null && !(name.isEmpty())) {
+        if (!(name.isEmpty())) {
             isCorrectQuestion1 = true;
             calculateTotalCorrectAnswers( isCorrectQuestion1, isCorrectQuestion2, isCorrectQuestion3, isCorrectQuestion4, isCorrectQuestion5 );
             // determine whether or not all questions in the quiz were answered correctly
@@ -50,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 allAnswersCorrect = false;
             }
-
+            //Follow is code required to pass data to the DisplayResults Activity
             Intent intent = new Intent( this, DisplayResultsActivity.class );
             Bundle extras = new Bundle();
             extras.putString( "Name", name );
@@ -67,8 +76,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    /**
+     * @param isCorrectQuestion1 input parameter identifies whether or not Question 1 is correct
+     * @param isCorrectQuestion2 input parameter identifies whether or not Question 2 is correct
+     * @param isCorrectQuestion3 input parameter identifies whether or not Question 3 is correct
+     * @param isCorrectQuestion4 input parameter identifies whether or not Question 4 is correct
+     * @param isCorrectQuestion5 input parameter identifies whether or not Question 5 is correct
+     */
+   /*
+
+    */
     private void calculateTotalCorrectAnswers(boolean isCorrectQuestion1, boolean isCorrectQuestion2, boolean isCorrectQuestion3, boolean isCorrectQuestion4, boolean isCorrectQuestion5) {
-        //A series of 'if' statements to increase the total number of questions correct
+        //A series of 'if' statements to calculate the total number of questions correct
         if (isCorrectQuestion1) {
             totalQuestionsCorrect += 1;
         }
@@ -94,10 +114,12 @@ public class MainActivity extends AppCompatActivity {
         this.percentCorrect = (((double) (totalQuestionsCorrect) * 100) / 5);
     }
 
+    /**
+     * @param view for Question 2
+     */
     public void onQuestion2Selected(View view) {
         //variable to indicate whether or not option selected is correct in switch statement below
         boolean checked = ((RadioButton) view).isChecked();
-
 
         //Verify whether or not correct scene was selected
         //Using a switch statement for demonstration purposes
@@ -118,11 +140,12 @@ public class MainActivity extends AppCompatActivity {
                 if (checked)
                     isCorrectQuestion2 = false;
                 break;
-
-
         }
     }
 
+    /**
+     * @param view for Question3
+     */
     public void onQuestion3Checked(View view) {
         /*For Question three, there are 3 checkboxes that must be selected to consider
         * the question as correct, if either of the other two checkboxes is checked
@@ -144,6 +167,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+   /**
+    * @param view for Question4
+    */
     public void onQuestion4Selected(View view) {
     /*For the first radio button in Question 2, I used a switch statement to check
     to see whether or not the user answered the question right.  For the remainder of the
@@ -151,29 +177,36 @@ public class MainActivity extends AppCompatActivity {
     I just check to see if jumanji is checked by using a simple if/else statement
      */
 
-        RadioButton radioButton = findViewById(R.id.jumanji);
+        RadioButton radioButton = findViewById( R.id.jumanji );
 
-        if (radioButton.isChecked()){
-            isCorrectQuestion4 =  true;
+        if (radioButton.isChecked()) {
+            isCorrectQuestion4 = true;
         } else {
-            isCorrectQuestion4 =  false;
+            isCorrectQuestion4 = false;
         }
-
     }
 
+    /**
+     *
+     * @param view for Question5
+     */
     public void onQuestion5Selected(View view) {
 
         /*Same logic as question 4 to determine whether or not user selected correct
         number of movies Dwayne starred in as Luke Hobbs*/
-        RadioButton radioButton = findViewById(R.id.value4);
+        RadioButton radioButton = findViewById( R.id.value4 );
 
-        if (radioButton.isChecked()){
-            isCorrectQuestion5 =  true;
+        if (radioButton.isChecked()) {
+            isCorrectQuestion5 = true;
         } else {
-            isCorrectQuestion5 =  false;
+            isCorrectQuestion5 = false;
         }
     }
 
+    /**
+     *The following method basically restarts the app
+     * @param view for the Reset button
+     */
     public void resetApp(View view) {
         Intent intent = getIntent();
         finish();
@@ -182,7 +215,6 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Toast invocation to display messages in the app
-     *
      * @param s = string for toast message
      */
     private void tToast(String s) {

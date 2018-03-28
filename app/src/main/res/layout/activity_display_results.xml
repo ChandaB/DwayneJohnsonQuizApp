@@ -5,29 +5,52 @@
     android:layout_height="match_parent"
     android:background="@color/primaryLightColor"
     tools:context="com.example.android.dwaynejohnsonquizapp.DisplayResultsActivity">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="32dp">
 
-    <TextView
-        android:id="@+id/resultsMessage"
-        android:textSize="36dp"
-        android:textColor="#FFFFFF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:layout_below="@id/resultsMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bluebuttonsmall"
-        android:id="@+id/btn1"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
-        android:layout_marginTop="56dp"
-        android:textColor="#FFFFFF"
-        android:layout_centerInParent="true"
-        android:text="Close Results Page to review your answers" />
-</RelativeLayout>
+        <LinearLayout
+            android:id="@+id/textLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp">
+        <TextView
+            android:id="@+id/resultsMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonLinearLayout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bluebuttonsmall"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="@string/close_results_page_to_review_your_answers"
+            android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#FFFFFF">
+        </LinearLayout>
+    </LinearLayout>
+
 </ScrollView>
